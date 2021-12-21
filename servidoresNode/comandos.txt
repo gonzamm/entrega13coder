@@ -1,0 +1,22 @@
+INICIO DEL SERVIDOR
+nodemon index.js --PORT 'numero de puerto'
+(En caso de no enviar el puerto, iniciara en el pueto 8080)
+
+INICIO DEL SERVIDOR EN MODO CLUSTER
+nodemon index.js --PORT 'numero de puerto' --MODO CLUSTER
+INICIO DEL SERVIDOR EN MODO FORK
+nodemon index.js --PORT 'numero de puerto' --MODO FORK
+(En caso de no enviar el modo, iniciara en modo FORK)
+
+FOREVER
+forever start index.js
+
+PM2
+pm2 start index.js -i 0 --watch
+(Inicio en modo cluster y con modo escucha)
+pm2 start index.js --watch
+(Inicio en modo fork y con modo escucha)
+pm2 start index.js -i 0
+(Inicio en modo cluster y sin modo escucha)
+pm2 start index.js
+(Inicio en modo fork y sin modo escucha)
